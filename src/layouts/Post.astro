@@ -1,0 +1,18 @@
+---
+// Layout for blog posts in src/pages/blog/
+import Base from './Base.astro';
+const { frontmatter } = Astro.props;
+const date = new Date(frontmatter.date);
+---
+<Base title={frontmatter.title} description={frontmatter.description}>
+  <article class="prose page">
+    <p class="back"><a href="/blog">All posts</a></p>
+    <h1>{frontmatter.title}</h1>
+    <p class="post-date">
+      <time datetime={date.toISOString().slice(0, 10)}>
+        {date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' })}
+      </time>
+    </p>
+    <slot />
+  </article>
+</Base>

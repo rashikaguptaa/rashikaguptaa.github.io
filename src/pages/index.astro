@@ -1,0 +1,55 @@
+---
+import Base from '../layouts/Base.astro';
+import ChainRule from '../components/ChainRule.astro';
+import PubList from '../components/PubList.astro';
+import Links from '../components/Links.astro';
+import { site, publications } from '../data/site.js';
+const selected = publications.filter((p) => p.selected);
+---
+<Base>
+  <section class="hero">
+    <div class="hero-text">
+      <h1 class="name">{site.name}</h1>
+      <p class="role">{site.position}<br />{site.affiliation}</p>
+      <div class="bio">
+        {site.bio.map((para) => <p>{para}</p>)}
+      </div>
+      <Links />
+    </div>
+    <img class="portrait" src={site.photo} alt={`Photo of ${site.name}`} width="280" height="340" />
+  </section>
+
+  <ChainRule />
+
+  <div class="home-grid">
+    <section class="block">
+      <h2>Research interests</h2>
+      <ul class="interests">
+        {site.interests.map((i) => <li>{i}</li>)}
+      </ul>
+      <p class="more"><a href="/research">More about my research</a></p>
+    </section>
+
+    {site.news.length > 0 && (
+      <section class="block">
+        <h2>News</h2>
+        <dl class="news">
+          {site.news.map((n) => (
+            <div>
+              <dt>{n.date}</dt>
+              <dd>{n.text}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
+    )}
+  </div>
+
+  {selected.length > 0 && (
+    <section class="block">
+      <h2>Selected publications</h2>
+      <PubList items={selected} />
+      <p class="more"><a href="/publications">All publications</a></p>
+    </section>
+  )}
+</Base>

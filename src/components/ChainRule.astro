@@ -1,0 +1,33 @@
+---
+// A small Markov chain drawn as a divider. The highlighted state
+// moves along one transition once when the page loads.
+---
+<figure class="chain" aria-hidden="true">
+  <svg viewBox="0 0 720 84" preserveAspectRatio="xMidYMid meet" role="presentation">
+    <defs>
+      <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M0,1 L9,5 L0,9" fill="none" stroke="currentColor" stroke-width="1.4" />
+      </marker>
+    </defs>
+    <g class="edges" fill="none" stroke="currentColor" stroke-width="1.1">
+      <path id="e01" d="M52,42 Q145,4 238,42" marker-end="url(#arr)" />
+      <path d="M262,42 Q360,4 458,42" marker-end="url(#arr)" />
+      <path d="M482,42 Q575,4 668,42" marker-end="url(#arr)" />
+      <path class="back" d="M458,50 Q360,82 262,50" marker-end="url(#arr)" />
+      <path class="back" d="M668,50 Q575,82 482,50" marker-end="url(#arr)" />
+      <path class="back" d="M244,36 C228,6 272,6 256,36" marker-end="url(#arr)" />
+    </g>
+    <g class="nodes">
+      <circle cx="40" cy="46" r="9" />
+      <circle cx="250" cy="46" r="9" />
+      <circle cx="470" cy="46" r="9" />
+      <circle cx="680" cy="46" r="9" />
+    </g>
+    <circle class="state state-static" cx="250" cy="46" r="5" />
+    <circle class="state state-moving" r="5" cx="0" cy="0">
+      <animateMotion dur="1.8s" begin="0.5s" fill="freeze" calcMode="spline"
+        keyTimes="0;1" keySplines="0.45 0 0.25 1"
+        path="M40,46 Q145,4 250,46" />
+    </circle>
+  </svg>
+</figure>

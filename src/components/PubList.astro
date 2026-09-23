@@ -1,0 +1,22 @@
+---
+import { site } from '../data/site.js';
+const { items } = Astro.props;
+
+// Put your own name in bold inside the author list.
+const escape = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+const authorsHtml = (authors) =>
+  escape(authors).split(escape(site.name)).join(`<strong>${escape(site.name)}</strong>`);
+---
+<ol class="pubs">
+  {items.map((p) => (
+    <li>
+      <p class="pub-title">
+        {p.link ? <a href={p.link}>{p.title}</a> : p.title}
+      </p>
+      <p class="pub-meta">
+        <span set:html={authorsHtml(p.authors)} />. <em>{p.venue}</em>, {p.year}.
+        {p.pdf && <a class="pub-link" href={p.pdf}>PDF</a>}
+      </p>
+    </li>
+  ))}
+</ol>

@@ -1,0 +1,28 @@
+---
+import Base from '../layouts/Base.astro';
+import PubList from '../components/PubList.astro';
+import { site, publications } from '../data/site.js';
+
+const groups = [
+  { type: 'journal', heading: 'Journal articles' },
+  { type: 'conference', heading: 'Conference papers' },
+  { type: 'preprint', heading: 'Preprints and working papers' },
+]
+  .map((g) => ({ ...g, items: publications.filter((p) => p.type === g.type) }))
+  .filter((g) => g.items.length > 0);
+---
+<Base title="Publications">
+  <div class="page">
+    <h1>Publications</h1>
+    {site.links.scholar && (
+      <p class="lede">For citation counts, see my <a href={site.links.scholar}>Google Scholar profile</a>.</p>
+    )}
+    {groups.map((g) => (
+      <section class="block">
+        <h2>{g.heading}</h2>
+        <PubList items={g.items} />
+      </section>
+    ))}
+    {groups.length === 0 && <p>Add your papers to <code>src/data/site.js</code> and they will appear here.</p>}
+  </div>
+</Base>

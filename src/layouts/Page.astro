@@ -1,0 +1,11 @@
+---
+// Layout for Markdown pages such as research.md
+import Base from './Base.astro';
+const { frontmatter } = Astro.props;
+---
+<Base title={frontmatter.title} description={frontmatter.description}>
+  <article class="prose page">
+    <h1>{frontmatter.title}</h1>
+    <slot />
+  </article>
+</Base>

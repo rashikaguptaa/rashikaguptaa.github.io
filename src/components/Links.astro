@@ -1,0 +1,15 @@
+---
+import { site } from '../data/site.js';
+const all = [
+  { label: 'Email', href: site.email ? `mailto:${site.email}` : '' },
+  { label: 'Google Scholar', href: site.links.scholar },
+  { label: 'ORCID', href: site.links.orcid },
+  { label: 'arXiv', href: site.links.arxiv },
+  { label: 'LinkedIn', href: site.links.linkedin },
+  { label: 'GitHub', href: site.links.github },
+  { label: 'CV', href: site.cv },
+].filter((l) => l.href);
+---
+<ul class="profile-links">
+  {all.map((l) => <li><a href={l.href}>{l.label}</a></li>)}
+</ul>
