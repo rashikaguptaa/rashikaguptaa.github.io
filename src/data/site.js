@@ -6,23 +6,23 @@
 // ============================================================
 
 export const site = {
-  name: "Your Name",
+  name: "Rashika Gupta",
   position: "PhD Student",
-  affiliation: "Your Department, Your University",
+  affiliation: "Operations & Decision Sciences, IIM Ahmedabad",
 
   // Put your photo in public/images/ and write its file name here.
   photo: "/images/profile.svg",
 
   // A one-line summary shown in search results and link previews.
-  description: "PhD student working on Markov decision processes and stochastic control.",
+  description: "PhD student working on Dynamic decision making and queuing theory.",
 
   // Each line in quotes becomes one paragraph on the home page.
   bio: [
-    "I am a PhD student at Your University, advised by Prof. Advisor Name. I study sequential decision-making under uncertainty.",
+    "I am a PhD student at IIM Ahmedabad, advised by Prof. Debjit Roy. I work on sequential decision-making under uncertainty.",
     "My research focuses on Markov decision processes: characterizing the structure of optimal policies, such as threshold and monotone policies, and using that structure to design efficient algorithms.",
   ],
 
-  email: "you@university.edu",
+  email: "phd22rashikag@iima.ac.in",
 
   // Upload your CV into the public folder as cv.pdf, then change this to "/cv.pdf".
   // While it is "", the CV link stays hidden.
