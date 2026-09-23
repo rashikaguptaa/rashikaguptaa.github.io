@@ -58,12 +58,12 @@ export const site = {
 // ------------------------------------------------------------
 export const publications = [
   {
-    title: "Title of your paper",
-    authors: "Your Name, Coauthor Name",
+    title: "Stochastic modeling and design of truck platooning strategies considering platoon dynamics",
+    authors: "R Gupta, DK Baby, D Roy, SC Subramanian, S Chakrabarti",
     venue: "Journal Name",
     year: 2026,
-    type: "journal",
-    link: "",
+    type: "Transportation Research Part E: Logistics and Transportation Review",
+    link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NjkakHIAAAAJ&citation_for_view=NjkakHIAAAAJ:9yKSN-GCB0IC",
     pdf: "",
     selected: true,
   },
