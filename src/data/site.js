@@ -135,7 +135,7 @@ export const education = [
 
 export const awards = [
   { year: "2026", text: "First Prize, Student Paper Competition, INFORMS Transportation Science and Logistics Society Triennial Conference, MIT Sloan School of Management" },
-  { year: "2025", text: "Runner-up, ISB-POMS Workshop, Indian School of Business" },
+  { year: "2025", text: "Runner-up (2nd prize), ISB-POMS Workshop, Indian School of Business" },
   { year: "2024", text: "Runner-up, Best Research Presentation, India Management Research Conference (IMRC)" },
   { year: "", text: "Industrial Finance Corporation of India (IFCI) Award for Best Thesis Proposal" },
   { year: "", text: "Mirae Asset Foundation Scholarship, IIM Ahmedabad" },
