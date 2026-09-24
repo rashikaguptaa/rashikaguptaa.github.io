@@ -1,5 +1,6 @@
 ---
 import { site } from '../data/site.js';
+import { teaching } from '../data/optional.js';
 import 'katex/dist/katex.min.css';
 import '../styles/global.css';
 
@@ -8,12 +9,30 @@ const pageTitle = title ? `${title} | ${site.name}` : site.name;
 const path = Astro.url.pathname.replace(/\/$/, '') || '/';
 const nav = [
   { href: '/', label: 'Home' },
+  { href: '/about', label: 'About' },
   { href: '/research', label: 'Research' },
   { href: '/publications', label: 'Publications' },
-  { href: '/blog', label: 'Blog' },
 ];
-const isActive = (href) => (href === '/' ? path === '/' : path.startsWith(href));
+// Teaching appears in the menu only once you add entries for it.
+if (teaching.length) nav.push({ href: '/teaching', label: 'Teaching' });
+nav.push({ href: '/blog', label: 'Blog' }, { href: '/#contact', label: 'Contact' });
+const isActive = (href) => (href.startsWith('/#') ? false : href === '/' ? path === '/' : path.startsWith(href));
 const ogImage = new URL(site.photo, Astro.site).href;
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+
+// Tells Google who you are (can help with a knowledge panel for your name).
+const person = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: site.name,
+  jobTitle: site.position,
+  affiliation: { '@type': 'Organization', name: site.affiliation },
+  url: new URL('/', Astro.site).href,
+  image: ogImage,
+  ...(site.email ? { email: `mailto:${site.email}` } : {}),
+  sameAs: Object.values(site.links ?? {}).filter(Boolean),
+};
+const updated = new Date().toLocaleDateString('en-GB', { month: 'long', year: 'numeric' });
 ---
 <!doctype html>
 <html lang="en">
@@ -22,6 +41,8 @@ const ogImage = new URL(site.photo, Astro.site).href;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="sitemap" href="/sitemap.xml" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
@@ -34,6 +55,7 @@ const ogImage = new URL(site.photo, Astro.site).href;
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;1,7..72,400&display=swap"
     />
+    {Astro.url.pathname === '/' && <script type="application/ld+json" set:html={JSON.stringify(person)} />}
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
@@ -60,6 +82,7 @@ const ogImage = new URL(site.photo, Astro.site).href;
     <footer class="site-footer">
       <div class="wrap footer-inner">
         <span>© {new Date().getFullYear()} {site.name}</span>
+        <span>Last updated {updated}</span>
         {site.email && <a href={`mailto:${site.email}`}>{site.email}</a>}
       </div>
     </footer>

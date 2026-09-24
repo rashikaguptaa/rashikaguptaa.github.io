@@ -1,0 +1,67 @@
+---
+import Base from '../layouts/Base.astro';
+import { site } from '../data/site.js';
+import { education, awards, service } from '../data/optional.js';
+---
+<Base title="About">
+  <div class="page">
+    <h1>About</h1>
+
+    {site.news?.length > 0 && (
+      <section class="block">
+        <h2>News</h2>
+        <ul class="entries">
+          {site.news.map((n) => (
+            <li>
+              <span class="entry-date">{n.date}</span>
+              <p>{n.text}</p>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    {education.length > 0 && (
+      <section class="block">
+        <h2>Education</h2>
+        <ul class="entries">
+          {education.map((e) => (
+            <li>
+              <span class="entry-date">{e.years}</span>
+              <div>
+                <p class="entry-title">{e.degree}</p>
+                <p class="entry-meta">{e.institution}</p>
+                {e.detail && <p class="entry-meta">{e.detail}</p>}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    {awards.length > 0 && (
+      <section class="block">
+        <h2>Awards and honours</h2>
+        <ul class="entries">
+          {awards.map((a) => (
+            <li>
+              <span class="entry-date">{a.year}</span>
+              <p>{a.text}</p>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    {service.length > 0 && (
+      <section class="block">
+        <h2>Service</h2>
+        <ul class="plain-list">
+          {service.map((s) => <li>{s}</li>)}
+        </ul>
+      </section>
+    )}
+
+    {site.cv && <p class="more"><a href={site.cv}>Download full CV (PDF)</a></p>}
+  </div>
+</Base>

@@ -1,7 +1,8 @@
 ---
 import { site } from '../data/site.js';
+const { noEmail = false } = Astro.props;
 const all = [
-  { label: 'Email', href: site.email ? `mailto:${site.email}` : '' },
+  { label: 'Email', href: site.email && !noEmail ? `mailto:${site.email}` : '' },
   { label: 'Google Scholar', href: site.links.scholar },
   { label: 'ORCID', href: site.links.orcid },
   { label: 'arXiv', href: site.links.arxiv },

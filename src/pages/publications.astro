@@ -2,11 +2,12 @@
 import Base from '../layouts/Base.astro';
 import PubList from '../components/PubList.astro';
 import { site, publications } from '../data/site.js';
+import { talks } from '../data/optional.js';
 
 const groups = [
-  { type: 'journal', heading: 'Journal articles' },
-  { type: 'conference', heading: 'Conference papers' },
-  { type: 'preprint', heading: 'Preprints and working papers' },
+  { type: 'journal', heading: 'Journal publications' },
+  { type: 'conference', heading: 'Conference proceedings' },
+  { type: 'preprint', heading: 'Preprints' },
 ]
   .map((g) => ({ ...g, items: publications.filter((p) => p.type === g.type) }))
   .filter((g) => g.items.length > 0);
@@ -23,6 +24,21 @@ const groups = [
         <PubList items={g.items} />
       </section>
     ))}
-    {groups.length === 0 && <p>Add your papers to <code>src/data/site.js</code> and they will appear here.</p>}
+    {talks.length > 0 && (
+      <section class="block">
+        <h2>Conference presentations</h2>
+        <ul class="entries">
+          {talks.map((t) => (
+            <li>
+              <span class="entry-date">{t.date}</span>
+              <div>
+                <p class="entry-title">{t.link ? <a href={t.link}>{t.title || t.event}</a> : t.title || t.event}</p>
+                <p class="entry-meta">{[t.title ? t.event : '', t.location].filter(Boolean).join(', ')}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
   </div>
 </Base>

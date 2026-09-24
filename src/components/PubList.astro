@@ -3,7 +3,7 @@ import { site } from '../data/site.js';
 const { items } = Astro.props;
 
 // Put your own name in bold inside the author list.
-const escape = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+const escape = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const authorsHtml = (authors) =>
   escape(authors).split(escape(site.name)).join(`<strong>${escape(site.name)}</strong>`);
 ---
@@ -15,8 +15,46 @@ const authorsHtml = (authors) =>
       </p>
       <p class="pub-meta">
         <span set:html={authorsHtml(p.authors)} />. <em>{p.venue}</em>, {p.year}.
-        {p.pdf && <a class="pub-link" href={p.pdf}>PDF</a>}
+        {p.status && <span class="pub-status">{p.status}</span>}
       </p>
+      {p.note && <p class="pub-note">{p.note}</p>}
+      {(p.abstract || p.bibtex || p.pdf || p.code || p.slides) && (
+        <div class="pub-actions">
+          {p.pdf && <a class="pub-btn" href={p.pdf}>PDF</a>}
+          {p.slides && <a class="pub-btn" href={p.slides}>Slides</a>}
+          {p.code && <a class="pub-btn" href={p.code}>Code</a>}
+          {p.abstract && (
+            <details class="pub-more">
+              <summary class="pub-btn">Abstract</summary>
+              <p class="pub-abstract">{p.abstract}</p>
+            </details>
+          )}
+          {p.bibtex && (
+            <details class="pub-more">
+              <summary class="pub-btn">BibTeX</summary>
+              <div class="bib">
+                <pre><code>{p.bibtex.trim()}</code></pre>
+                <button type="button" class="copy-bib">Copy</button>
+              </div>
+            </details>
+          )}
+        </div>
+      )}
     </li>
   ))}
 </ol>
+
+<script>
+  document.querySelectorAll('.copy-bib').forEach((btn) => {
+    btn.addEventListener('click', async () => {
+      const text = btn.parentElement.querySelector('code').textContent;
+      try {
+        await navigator.clipboard.writeText(text);
+        btn.textContent = 'Copied';
+      } catch {
+        btn.textContent = 'Select and copy';
+      }
+      setTimeout(() => (btn.textContent = 'Copy'), 1800);
+    });
+  });
+</script>
