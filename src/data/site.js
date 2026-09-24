@@ -150,6 +150,7 @@ export const service = [
 //  TEACHING — newest first. Shown on the Teaching page.
 // ------------------------------------------------------------
 export const teaching = [
-  { term: "Jun 2025", course: "[ADD course name]", role: "Course instructor (16 sessions, 200+ PGP and FABM students)", institution: "IIM Ahmedabad" },
-  { term: "Dec 2024 – Jan 2026", course: "Operations Management; Quantitative Methods", role: "Academic assistant", institution: "IIM Ahmedabad" },
+  { term: "Jun 2025", course: "Mathematics Preparatory Course for PGP", role: "Course instructor (16 sessions, 200+ PGP and FABM students)", institution: "IIM Ahmedabad" },
+  { term: "Dec 2024 – Jan 2026", course: "Operations Management", role: "Academic assistant", institution: "IIM Ahmedabad" },
+   { term: "Dec 2024 – Jan 2026", course: "Quantitative Methods", role: "Academic assistant", institution: "IIM Ahmedabad" },
 ];
