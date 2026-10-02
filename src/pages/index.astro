@@ -5,11 +5,8 @@ import Links from '../components/Links.astro';
 import Banner from '../components/Banner.astro';
 import PubList from '../components/PubList.astro';
 import { site, publications } from '../data/site.js';
-import { posts, formatDate, isoDate } from '../data/posts.js';
 
-const news = (site.news ?? []).slice(0, 4);
 const selected = publications.filter((p) => p.selected);
-const latest = posts.slice(0, 3);
 ---
 <Base>
   <section class="hero">
@@ -28,45 +25,11 @@ const latest = posts.slice(0, 3);
 
   <ChainRule />
 
-  {(news.length > 0 || selected.length > 0) && (
-    <div class="home-grid">
-      {news.length > 0 && (
-        <section class="block">
-          <h2>News</h2>
-          <dl class="news">
-            {news.map((n) => (
-              <div>
-                <dt>{n.date}</dt>
-                <dd>{n.link ? <a href={n.link}>{n.text}</a> : n.text}</dd>
-              </div>
-            ))}
-          </dl>
-          {(site.news?.length ?? 0) > news.length && <p class="more"><a href="/about">All news</a></p>}
-        </section>
-      )}
-      {selected.length > 0 && (
-        <section class="block">
-          <h2>Selected publications</h2>
-          <PubList items={selected} />
-          <p class="more"><a href="/publications">All publications and talks</a></p>
-        </section>
-      )}
-    </div>
-  )}
-
-  {latest.length > 0 && (
+  {selected.length > 0 && (
     <section class="block">
-      <h2>From the blog</h2>
-      <ul class="post-cards">
-        {latest.map((p) => (
-          <li>
-            <time datetime={isoDate(p.date)}>{formatDate(p.date)}</time>
-            <a class="post-link" href={p.url}>{p.title}</a>
-            {p.description && <p class="post-desc">{p.description}</p>}
-          </li>
-        ))}
-      </ul>
-      <p class="more"><a href="/blog">All posts</a></p>
+      <h2>Selected publications</h2>
+      <PubList items={selected} />
+      <p class="more"><a href="/publications">All publications and talks</a></p>
     </section>
   )}
 
