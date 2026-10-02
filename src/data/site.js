@@ -44,9 +44,9 @@ export const site = {
   news: [
     { date: "2026", text: "Won First Prize in the Student Poster Competition at the INFORMS Transportation Science and Logistics Society Triennial Conference, MIT Sloan School of Management.", link: "" },
     { date: "2026", text: "Our paper on stochastic modeling and design of truck platooning strategies is published in Transportation Research Part E.", link: "https://www.sciencedirect.com/science/article/pii/S1366554526000244" },
-    { date: "2026", text: "Runner-up in the Student Paper Competition at the ISB-POMS Workshop, Indian School of Business.", link: "" },
+    { date: "2026", text: "Runner-up in the Student Paper Competition at the ISB-POMS Workshop, Indian School of Business, Mohali.", link: "" },
     { date: "Dec 2025", text: "Presented at the India Management Research Conference (IMRC), IIM Ahmedabad.", link: "" },
-    { date: "Jul 2025", text: "Presented a poster at the ISB-POMS Workshop, Indian School of Business.", link: "" },
+    { date: "Jul 2025", text: "Presented a poster at the ISB-POMS Workshop, Indian School of Business, Hyderabad.", link: "" },
     { date: "Jun 2025", text: "Taught the Mathematics Preparatory Course to 200+ incoming PGP and FABM students at IIM Ahmedabad.", link: "" },
     { date: "Dec 2024", text: "Runner-up, Best Research Presentation, India Management Research Conference (IMRC).", link: "" },
   ],
@@ -132,10 +132,10 @@ export const publications = [
 // ------------------------------------------------------------
 export const talks = [
   { date: "2026", title: "", event: "INFORMS TSL Society Triennial Conference (Student Poster Competition, First Prize)", location: "MIT Sloan School of Management, Cambridge, MA, USA", link: "" },
-  { date: "2026", title: "", event: "ISB-POMS Workshop (Student Paper Competition, Runner-up)", location: "Indian School of Business, India", link: "" },
-  { date: "2026", title: "", event: "POMS 2026 Annual Conference", location: "", link: "" },
+  { date: "2026", title: "", event: "ISB-POMS Workshop (Student Paper Competition, Runner-up)", location: "Indian School of Business, Mohali, India", link: "" },
+  { date: "2026", title: "", event: "POMS 2026 Annual Conference", location: "Reno, NV, USA", link: "" },
   { date: "Dec 2025", title: "", event: "India Management Research Conference (IMRC)", location: "IIM Ahmedabad, India", link: "" },
-  { date: "Jul 2025", title: "", event: "ISB-POMS Workshop (Student Poster Presentation)", location: "Indian School of Business, India", link: "" },
+  { date: "Jul 2025", title: "", event: "ISB-POMS Workshop (Student Poster Presentation)", location: "Indian School of Business, Hyderabad, India", link: "" },
   { date: "Dec 2024", title: "", event: "India Management Research Conference (IMRC) (Runner-up, Best Research Presentation)", location: "IIM Ahmedabad, India", link: "" },
   { date: "Dec 2024", title: "", event: "POMS India International Conference", location: "IIM Ranchi, India", link: "" },
 ];
@@ -151,7 +151,7 @@ export const education = [
 
 export const awards = [
   { year: "2026", text: "First Prize, Student Poster Competition, INFORMS Transportation Science and Logistics Society Triennial Conference, MIT Sloan School of Management" },
-  { year: "2026", text: "Runner-up, Student Paper Competition, ISB-POMS Workshop, Indian School of Business" },
+  { year: "2026", text: "Runner-up, Student Paper Competition, ISB-POMS Workshop, Indian School of Business, Mohali" },
   { year: "2024", text: "Runner-up, Best Research Presentation, India Management Research Conference (IMRC)" },
   { year: "", text: "Industrial Finance Corporation of India (IFCI) Award for Best Thesis Proposal" },
   { year: "", text: "Mirae Asset Foundation Scholarship, IIM Ahmedabad" },
