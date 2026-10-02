@@ -19,8 +19,8 @@ export const site = {
 
   // Each line in quotes becomes one paragraph on the home page.
   bio: [
-    "As a doctoral student in Operations management, I study how logistics and mobility systems can make better decisions in the face of uncertainty. My work designs operating policies that help systems run more efficiently and more sustainably, with a focus on warehouse operations and transportation and logisitcs.",
-    "My research draws on stochastic models, including queuing networks, continuous-time Markov chains, simulation and Markov decision processes. Current applications include robot routing in warehouses, admission and power allocation at EV charging stations, and truck platooning in freight transportation.",
+    "As a doctoral student in operations management, I study how logistics and mobility systems can make better decisions in the face of uncertainty. My work designs operating policies that help these systems run more efficiently and more sustainably, with a focus on warehouse operations, transportation and logistics.",
+    "My research draws on stochastic models, including queueing networks, continuous-time Markov chains, simulation, and Markov decision processes. Current applications include robot routing in warehouses, admission and power allocation at EV charging stations, and truck platooning in freight transportation.",
     "My dissertation, “Dynamic decision making in intralogistics and e-mobility systems,” is supervised by a committee chaired by Prof. Debjit Roy, with Prof. Prahalad Venkateshan and Prof. Ivo Adan.",
   ],
 
@@ -39,11 +39,22 @@ export const site = {
     github: "",
   },
 
+  // Short items shown under "News" on the home page and the About page, newest first.
+  // link is optional.
+  news: [
+    { date: "2026", text: "Won First Prize in the Student Paper Competition at the INFORMS Transportation Science and Logistics Society Triennial Conference, MIT Sloan School of Management.", link: "" },
+    { date: "2026", text: "Our paper on stochastic modeling and design of truck platooning strategies is published in Transportation Research Part E.", link: "https://www.sciencedirect.com/science/article/pii/S1366554526000244" },
+    { date: "Dec 2025", text: "Presented at the India Management Research Conference (IMRC), IIM Ahmedabad.", link: "" },
+    { date: "Jul 2025", text: "Runner-up (2nd prize) at the ISB-POMS Workshop, Indian School of Business.", link: "" },
+    { date: "Jun 2025", text: "Taught the Mathematics Preparatory Course to 200+ incoming PGP and FABM students at IIM Ahmedabad.", link: "" },
+    { date: "Dec 2024", text: "Runner-up, Best Research Presentation, India Management Research Conference (IMRC).", link: "" },
+  ],
+
   interests: [
     "Warehouse operations and intralogistics",
     "Electric vehicle charging",
     "Freight transportation",
-    "Last mile delivery"
+    "Last mile delivery",
   ],
 };
 
@@ -73,7 +84,7 @@ export const research = [
     methods: ["Queueing networks", "Continuous-time Markov chains", "Markov decision processes"],
     art: "platoon",
     image: "",
-    link: "",
+    link: "https://www.sciencedirect.com/science/article/pii/S1366554526000244",
   },
   {
     title: "Robotic Warehouses and Intralogistics",
@@ -94,8 +105,10 @@ export const research = [
 ];
 
 // ------------------------------------------------------------
-//  PUBLICATIONS — published papers only, newest first.
+//  PUBLICATIONS — newest first.
+//  type: "journal", "conference", "preprint" or "working" (working papers)
 //  selected: true  → also shown on the home page
+//  status: e.g. "Under review" or "Major revision" (shown as a small label)
 //  Optional extras: abstract, note, code, slides, bibtex
 // ------------------------------------------------------------
 export const publications = [
@@ -105,7 +118,7 @@ export const publications = [
     venue: "Transportation Research Part E: Logistics and Transportation Review",
     year: 2026,
     type: "journal",
-    link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=NjkakHIAAAAJ&citation_for_view=NjkakHIAAAAJ:9yKSN-GCB0IC",   // [ADD] the DOI link, e.g. "https://doi.org/10...."
+    link: "https://www.sciencedirect.com/science/article/pii/S1366554526000244",   // [CHECK] swap for the DOI link ("https://doi.org/10.1016/j.tre....") once confirmed
     pdf: "",
     abstract: "Road transportation via trucks is a dominant mode for long-haul freight transport across countries. However, due to their significant dependence on fossil fuels, trucks are a large contributor to carbon emissions. Hence, new technology-driven solutions such as truck platoons are gaining momentum. While platoons promise to reduce fuel costs and emissions, they may increase transportation time due to additional coordination delays, such as the time required for platoon formation. In this research, we examine the performance trade-offs between platoon fuel savings and excess delay costs resulting from waiting for platoon formation among three platoon formation strategies: intermittent, continuous, and opportunistic. We develop a novel Closed Queuing Network model that captures the dynamics of platoons, as well as the stochasticity in truck travel times, and provides realistic estimates of platoon wait times and vehicle throughput. The platoon formation delays and size-dependent travel times are modeled using merging and load-dependent nodes, respectively, and analyzed through a continuous-time Markov chain. Our study provides key insights into the impact of increasing platoon size on performance measures, including system throughput and mean waiting time. With platooning, the network throughput capacity is reduced; however, fuel savings are realized. For a given network topology, we can identify an optimal platoon formation strategy that maximizes the throughput and fuel efficiency, while simultaneously minimizing vehicle waiting costs.",
     selected: true,
@@ -152,5 +165,5 @@ export const service = [
 export const teaching = [
   { term: "Jun 2025", course: "Mathematics Preparatory Course for PGP", role: "Course instructor (16 sessions, 200+ PGP and FABM students)", institution: "IIM Ahmedabad" },
   { term: "Dec 2024 – Jan 2026", course: "Operations Management", role: "Academic assistant", institution: "IIM Ahmedabad" },
-   { term: "Dec 2024 – Jan 2026", course: "Quantitative Methods", role: "Academic assistant", institution: "IIM Ahmedabad" },
+  { term: "Dec 2024 – Jan 2026", course: "Quantitative Methods", role: "Academic assistant", institution: "IIM Ahmedabad" },
 ];

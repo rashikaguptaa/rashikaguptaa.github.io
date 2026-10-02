@@ -14,7 +14,7 @@ import { education, awards, service } from '../data/optional.js';
           {site.news.map((n) => (
             <li>
               <span class="entry-date">{n.date}</span>
-              <p>{n.text}</p>
+              <p>{n.link ? <a href={n.link}>{n.text}</a> : n.text}</p>
             </li>
           ))}
         </ul>

@@ -1,18 +1,29 @@
 ---
 // Layout for blog posts in src/pages/blog/
 import Base from './Base.astro';
-const { frontmatter } = Astro.props;
-const date = new Date(frontmatter.date);
+import { posts, formatDate, isoDate } from '../data/posts.js';
+const { frontmatter, url } = Astro.props;
+const tags = frontmatter.tags ?? [];
+const here = (url ?? Astro.url.pathname).replace(/\/$/, '');
+const i = posts.findIndex((p) => p.url.replace(/\/$/, '') === here);
+const newer = i > 0 ? posts[i - 1] : null;
+const older = i >= 0 && i < posts.length - 1 ? posts[i + 1] : null;
 ---
-<Base title={frontmatter.title} description={frontmatter.description}>
-  <article class="prose page">
+<Base title={frontmatter.title} description={frontmatter.description} type="article" date={frontmatter.date}>
+  <article class="prose page post">
     <p class="back"><a href="/blog">All posts</a></p>
     <h1>{frontmatter.title}</h1>
     <p class="post-date">
-      <time datetime={date.toISOString().slice(0, 10)}>
-        {date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' })}
-      </time>
+      <time datetime={isoDate(frontmatter.date)}>{formatDate(frontmatter.date, 'long')}</time>
+      {frontmatter.minutesRead && <span> · {frontmatter.minutesRead} min read</span>}
+      {tags.length > 0 && <span> · {tags.join(', ')}</span>}
     </p>
     <slot />
   </article>
+  {(newer || older) && (
+    <nav class="post-nav" aria-label="More posts">
+      {older ? <a class="post-nav-older" href={older.url}><span>Older</span>{older.title}</a> : <span />}
+      {newer ? <a class="post-nav-newer" href={newer.url}><span>Newer</span>{newer.title}</a> : <span />}
+    </nav>
+  )}
 </Base>
