@@ -8,6 +8,7 @@ const groups = [
   { type: 'journal', heading: 'Journal publications' },
   { type: 'conference', heading: 'Conference proceedings' },
   { type: 'preprint', heading: 'Preprints' },
+  { type: 'working', heading: 'Working papers' },
 ]
   .map((g) => ({ ...g, items: publications.filter((p) => p.type === g.type) }))
   .filter((g) => g.items.length > 0);

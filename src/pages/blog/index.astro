@@ -1,22 +1,28 @@
 ---
 import Base from '../../layouts/Base.astro';
-
-// Every .md file in this folder is a post.
-const posts = Object.values(import.meta.glob('./*.md', { eager: true }))
-  .map((p) => ({ ...p.frontmatter, url: p.url }))
-  .sort((a, b) => new Date(b.date) - new Date(a.date));
-const fmt = (d) =>
-  new Date(d).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' });
+import { posts, formatDate, isoDate } from '../../data/posts.js';
 ---
-<Base title="Blog">
+<Base title="Blog" description="Notes on Markov decision processes, queueing models and operations research.">
   <div class="page">
     <h1>Blog</h1>
+    <p class="lede">
+      Notes on Markov decision processes, queueing models and the operations problems I work on.
+      Posts include full proofs and short Python checks.
+      <a class="feed-link" href="/rss.xml">RSS feed</a>
+    </p>
     {posts.length === 0 && <p>No posts yet.</p>}
     <ul class="post-list">
       {posts.map((p) => (
         <li>
-          <time datetime={p.date}>{fmt(p.date)}</time>
-          <a href={p.url}>{p.title}</a>
+          <time datetime={isoDate(p.date)}>{formatDate(p.date)}</time>
+          <div>
+            <a class="post-link" href={p.url}>{p.title}</a>
+            {p.description && <p class="post-desc">{p.description}</p>}
+            <p class="post-info">
+              {p.minutesRead && <span>{p.minutesRead} min read</span>}
+              {p.tags.length > 0 && <span>{p.tags.join(' · ')}</span>}
+            </p>
+          </div>
         </li>
       ))}
     </ul>
