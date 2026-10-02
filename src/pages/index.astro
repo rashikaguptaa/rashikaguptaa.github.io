@@ -3,10 +3,7 @@ import Base from '../layouts/Base.astro';
 import ChainRule from '../components/ChainRule.astro';
 import Links from '../components/Links.astro';
 import Banner from '../components/Banner.astro';
-import PubList from '../components/PubList.astro';
-import { site, publications } from '../data/site.js';
-
-const selected = publications.filter((p) => p.selected);
+import { site } from '../data/site.js';
 ---
 <Base>
   <section class="hero">
@@ -24,14 +21,6 @@ const selected = publications.filter((p) => p.selected);
   <Banner />
 
   <ChainRule />
-
-  {selected.length > 0 && (
-    <section class="block">
-      <h2>Selected publications</h2>
-      <PubList items={selected} />
-      <p class="more"><a href="/publications">All publications and talks</a></p>
-    </section>
-  )}
 
   <section class="block contact" id="contact">
     <h2>Contact</h2>
