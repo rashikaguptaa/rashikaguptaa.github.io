@@ -7,20 +7,6 @@ import { education, awards, service } from '../data/optional.js';
   <div class="page">
     <h1>About</h1>
 
-    {site.news?.length > 0 && (
-      <section class="block">
-        <h2>News</h2>
-        <ul class="entries">
-          {site.news.map((n) => (
-            <li>
-              <span class="entry-date">{n.date}</span>
-              <p>{n.link ? <a href={n.link}>{n.text}</a> : n.text}</p>
-            </li>
-          ))}
-        </ul>
-      </section>
-    )}
-
     {education.length > 0 && (
       <section class="block">
         <h2>Education</h2>
@@ -58,6 +44,20 @@ import { education, awards, service } from '../data/optional.js';
         <h2>Service</h2>
         <ul class="plain-list">
           {service.map((s) => <li>{s}</li>)}
+        </ul>
+      </section>
+    )}
+
+    {site.news?.length > 0 && (
+      <section class="block">
+        <h2>News</h2>
+        <ul class="entries">
+          {site.news.map((n) => (
+            <li>
+              <span class="entry-date">{n.date}</span>
+              <p>{n.link ? <a href={n.link}>{n.text}</a> : n.text}</p>
+            </li>
+          ))}
         </ul>
       </section>
     )}

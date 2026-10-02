@@ -145,16 +145,15 @@ export const talks = [
 // ------------------------------------------------------------
 export const education = [
   { years: "2022 – present", degree: "PhD in Management, Operations & Decision Sciences", institution: "Indian Institute of Management Ahmedabad", detail: "Committee: Debjit Roy (Chair), Prahalad Venkateshan, Ivo Adan" },
-  { years: "2021 – 2022", degree: "M.Tech, Environmental Engineering (discontinued)", institution: "Indian Institute of Technology (BHU) Varanasi", detail: "" },
-  { years: "2017 – 2021", degree: "B.Tech in Civil Engineering", institution: "Institute of Engineering & Technology", detail: "" },
+  { years: "2021 – 2022", degree: "M.Tech, Environmental Engineering (discontinued to pursue PhD)", institution: "Indian Institute of Technology (BHU) Varanasi", detail: "" },
+  { years: "2017 – 2021", degree: "B.Tech in Civil Engineering", institution: "Institute of Engineering & Technology, Lucknow", detail: "" },
 ];
 
 export const awards = [
   { year: "2026", text: "First Prize, Student Poster Competition, INFORMS Transportation Science and Logistics Society Triennial Conference, MIT Sloan School of Management" },
   { year: "2026", text: "Runner-up, Student Paper Competition, ISB-POMS Workshop, Indian School of Business, Mohali" },
+  { year: "2026", text: "Industrial Finance Corporation of India (IFCI) Award for Best Thesis Proposal" },
   { year: "2024", text: "Runner-up, Best Research Presentation, India Management Research Conference (IMRC)" },
-  { year: "", text: "Industrial Finance Corporation of India (IFCI) Award for Best Thesis Proposal" },
-  { year: "", text: "Mirae Asset Foundation Scholarship, IIM Ahmedabad" },
 ];
 
 export const service = [
