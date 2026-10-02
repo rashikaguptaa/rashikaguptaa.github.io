@@ -108,7 +108,7 @@ export const research = [
 // ------------------------------------------------------------
 //  PUBLICATIONS — newest first.
 //  type: "journal", "conference", "preprint" or "working" (working papers)
-//  selected: true  → also shown on the home page
+//  selected: true  → marks a key paper (not shown separately at the moment)
 //  status: e.g. "Under review" or "Major revision" (shown as a small label)
 //  Optional extras: abstract, note, code, slides, bibtex
 // ------------------------------------------------------------
