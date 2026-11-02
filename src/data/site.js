@@ -48,7 +48,7 @@ export const site = {
     { date: "Dec 2025", text: "Presented at the India Management Research Conference (IMRC), IIM Ahmedabad.", link: "" },
     { date: "Jul 2025", text: "Presented a poster at the ISB-POMS Workshop, Indian School of Business, Hyderabad.", link: "" },
     { date: "Jun 2025", text: "Taught the Mathematics Preparatory Course to 200+ incoming PGP and FABM students at IIM Ahmedabad.", link: "" },
-    { date: "Dec 2024", text: "Runner-up, Best Research Presentation, India Management Research Conference (IMRC).", link: "" },
+    { date: "Dec 2024", text: "2nd Runner-up, Best Research Presentation, Transportation and Logistics Track, India Management Research Conference (IMRC).", link: "" },
   ],
 
   interests: [
@@ -136,7 +136,7 @@ export const talks = [
   { date: "2026", title: "", event: "POMS 2026 Annual Conference", location: "Reno, NV, USA", link: "" },
   { date: "Dec 2025", title: "", event: "India Management Research Conference (IMRC)", location: "IIM Ahmedabad, India", link: "" },
   { date: "Jul 2025", title: "", event: "ISB-POMS Workshop (Student Poster Presentation)", location: "Indian School of Business, Hyderabad, India", link: "" },
-  { date: "Dec 2024", title: "", event: "India Management Research Conference (IMRC) (Runner-up, Best Research Presentation)", location: "IIM Ahmedabad, India", link: "" },
+  { date: "Dec 2024", title: "", event: "India Management Research Conference (IMRC) (2nd Runner-up, Best Research Presentation, Transportation and Logistics Track)", location: "IIM Ahmedabad, India", link: "" },
   { date: "Dec 2024", title: "", event: "POMS India International Conference", location: "IIM Ranchi, India", link: "" },
 ];
 
@@ -153,7 +153,7 @@ export const awards = [
   { year: "2026", text: "First Prize, Student Poster Competition, INFORMS Transportation Science and Logistics Society Triennial Conference, MIT Sloan School of Management" },
   { year: "2026", text: "Runner-up, Student Paper Competition, ISB-POMS Workshop, Indian School of Business, Mohali" },
   { year: "2026", text: "Industrial Finance Corporation of India (IFCI) Award for Best Thesis Proposal" },
-  { year: "2024", text: "Runner-up, Best Research Presentation, India Management Research Conference (IMRC)" },
+  { year: "2024", text: "2nd Runner-up, Best Research Presentation, Transportation and Logistics Track, India Management Research Conference (IMRC)" },
 ];
 
 export const service = [
@@ -165,7 +165,24 @@ export const service = [
 //  TEACHING — newest first. Shown on the Teaching page.
 // ------------------------------------------------------------
 export const teaching = [
-  { term: "Jun 2025", course: "Mathematics Preparatory Course for PGP", role: "Course instructor (16 sessions, 200+ PGP and FABM students)", institution: "IIM Ahmedabad" },
-  { term: "Dec 2024 – Jan 2026", course: "Operations Management", role: "Academic assistant", institution: "IIM Ahmedabad" },
-  { term: "Dec 2024 – Jan 2026", course: "Quantitative Methods", role: "Academic assistant", institution: "IIM Ahmedabad" },
+  {
+    term: "Jun 2025",
+    course: "Mathematics Preparatory Course for PGP",
+    role: "Course instructor",
+    institution: "IIM Ahmedabad",
+    detail: "Delivered 16 sessions for 200+ PGP and FABM students. Teaching evaluation: 8.2/10.",
+  },
+  {
+    term: "Dec 2024 – Jan 2026",
+    course: "PGP courses",
+    role: "Teaching assistant",
+    institution: "IIM Ahmedabad",
+    detail: "Provided lecture support, conducted tutorials, graded assignments, and mentored students.",
+    courses: [
+      { name: "Operations Management I", instructor: "Chetan Soman" },
+      { name: "Operations Management III", instructor: "Debjit Roy" },
+      { name: "Quantitative Methods IB", instructor: "Diptesh Ghosh" },
+      { name: "Quantitative Methods II", instructor: "Rajni Kant Bansal" },
+    ],
+  },
 ];
