@@ -70,7 +70,7 @@ export const banner = [
 
 // ------------------------------------------------------------
 //  RESEARCH AREAS — shown on the Research page.
-//  art: "platoon", "warehouse" or "ev" picks a built-in drawing.
+//  art: "platoon", "warehouse", "ev" or "ev-switching" picks a built-in drawing.
 //  image: "/images/research/xyz.jpg" uses your own photo instead.
 //  link: "" or a link to the paper ("Learn more" button).
 // ------------------------------------------------------------
@@ -104,7 +104,7 @@ export const research = [
     title: "Dynamic Charging-Mode Switching",
     text: "I extend the EV charging model to allow ongoing sessions to switch between fast and slow charging at arrival and completion events. I study how admission and mode-switching decisions should respond to changing queues and shared power constraints.",
     methods: ["Markov decision processes", "Dynamic programming"],
-    art: "ev",
+    art: "ev-switching",
     image: "",
     link: "",
   },

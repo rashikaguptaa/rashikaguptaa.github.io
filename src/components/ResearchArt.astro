@@ -52,4 +52,27 @@ const { kind } = Astro.props;
       <text class="art-label" x="160" y="186" text-anchor="middle">admission and charging</text>
     </g>
   )}
+  {kind === 'ev-switching' && (
+    <g data-illustration="ev-mode-switching">
+      <rect class="art-line" x="32" y="22" width="78" height="48" rx="4" />
+      <rect class="art-line" x="158" y="22" width="78" height="48" rx="4" />
+      <text class="art-label" x="71" y="41" text-anchor="middle" style="font-size:13px">Slow</text>
+      <text class="art-label" x="197" y="41" text-anchor="middle" style="font-size:13px">Fast</text>
+      <path class="art-line" d="M73,47 l-5,9 h6 l-3,8" />
+      <path class="art-line" d="M190,47 l-5,9 h6 l-3,8 M203,47 l-5,9 h6 l-3,8" />
+      <path class="art-line" style="stroke:var(--accent);stroke-width:1.8" d="M116,36 H150 m-5,-4 l5,4 -5,4 M150,56 H116 m5,-4 l-5,4 5,4" />
+      <path class="art-line" d="M236,46 H266 V64" />
+      <rect class="art-line" x="244" y="64" width="44" height="90" rx="4" />
+      <rect class="art-fill-soft" x="252" y="74" width="28" height="18" rx="2" />
+      <path class="art-line" d="M268,103 l-7,14 h9 l-5,15" />
+      <path class="art-line" d="M244,123 C219,123 224,137 190,137 H184" />
+      <path class="art-line" d="M34,143 v-13 l18,-25 h66 l22,25 h28 q16,0 16,13 v6 H34 z" />
+      <path class="art-line" d="M58,112 h52 l15,18 H45" />
+      <circle class="art-fill" cx="64" cy="149" r="7" />
+      <circle class="art-fill" cx="157" cy="149" r="7" />
+      <circle class="art-state" cx="184" cy="137" r="3" />
+      <line class="art-road" x1="16" y1="162" x2="304" y2="162" />
+      <text class="art-label" x="160" y="186" text-anchor="middle">switching during charging</text>
+    </g>
+  )}
 </svg>
