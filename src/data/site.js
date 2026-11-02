@@ -15,13 +15,13 @@ export const site = {
   photo: "/images/formal.jpg",
 
   // A one-line summary shown in search results and link previews.
-  description: "PhD candidate at IIM Ahmedabad working on Markov decision processes and queueing models for warehouse operations, EV charging, and freight transportation.",
+  description: "PhD candidate at IIM Ahmedabad researching electric vehicles, mobility systems, and transportation and logistics using stochastic models and dynamic optimization.",
 
   // Each line in quotes becomes one paragraph on the home page.
   bio: [
-    "As a doctoral student in operations management, I study how logistics and mobility systems can make better decisions in the face of uncertainty. My work designs operating policies that help these systems run more efficiently and more sustainably, with a focus on warehouse operations, transportation and logistics.",
-    "My research draws on stochastic models, including queueing networks, continuous-time Markov chains, simulation, and Markov decision processes. Current applications include robot routing in warehouses, admission and power allocation at EV charging stations, and truck platooning in freight transportation.",
-    "My dissertation, “Dynamic decision making in intralogistics and e-mobility systems,” is supervised by a committee chaired by Prof. Debjit Roy, with Prof. Prahalad Venkateshan and Prof. Ivo Adan.",
+    "My research focuses on electric vehicles (EVs), mobility systems, and transportation and logistics. I study how operational decisions should adapt to uncertainty and limited resources, with applications in EV charging and intralogistics.",
+    "I use Markov decision processes, dynamic programming, queueing models, and simulation to develop and analyze operating policies.",
+    "My dissertation, “Dynamic Decision Making in Intralogistics and E-Mobility Systems,” comprises three essays on human–robot collaborative warehouse operations, EV charging admission and mode assignment, and dynamic charging-mode switching. My thesis committee is chaired by Prof. Debjit Roy, with Prof. Prahalad Venkateshan and Prof. Ivo Adan.",
   ],
 
   email: "phd22rashikag@iima.ac.in",
@@ -52,10 +52,9 @@ export const site = {
   ],
 
   interests: [
-    "Warehouse operations and intralogistics",
-    "Electric vehicle charging",
-    "Freight transportation",
-    "Last mile delivery",
+    "Electric vehicles and charging systems",
+    "Mobility systems",
+    "Transportation and logistics",
   ],
 };
 
@@ -76,32 +75,47 @@ export const banner = [
 //  link: "" or a link to the paper ("Learn more" button).
 // ------------------------------------------------------------
 export const researchIntro =
-  "I build stochastic models of operational systems (queueing networks, continuous-time Markov chains, and Markov decision processes) and use them to design operating policies that adapt to uncertainty. My dissertation, “Dynamic decision making in intralogistics and e-mobility systems,” develops these ideas in three areas.";
+  "My research focuses on electric vehicles (EVs), mobility systems, and transportation and logistics. I use Markov decision processes, dynamic programming, queueing models, and simulation to study operating policies and resource allocation under uncertainty.";
 
 export const research = [
   {
-    title: "Truck Platooning in Freight Transportation",
-    text: "Trucks travelling in closely spaced platoons save fuel, but waiting to form a platoon causes coordination delays. I model platoon formation as a queueing network and use Markov decision processes to find formation strategies that balance throughput and fuel efficiency.",
-    methods: ["Queueing networks", "Continuous-time Markov chains", "Markov decision processes"],
-    art: "platoon",
-    image: "",
-    link: "https://www.sciencedirect.com/science/article/pii/S1366554526000244",
-  },
-  {
-    title: "Robotic Warehouses and Intralogistics",
-    text: "In robot-based warehouses, the choice of which orders to process and how to route robots determines throughput and order lead times. I study how routing and order selection decisions should respond to the state of the system.",
-    methods: ["Queueing networks", "Markov decision processes", "Simulation"],
+    category: "thesis",
+    label: "Essay 1",
+    title: "Order Selection and Robot Routing in Collaborative Warehouses",
+    text: "I study how orders should be selected and robots routed in human–robot collaborative warehouses to maximize picking throughput.",
+    methods: ["Markov decision processes", "Simulation"],
     art: "warehouse",
     image: "",
     link: "",
   },
   {
-    title: "Electric Vehicle Charging Operations",
-    text: "A charging station with limited power must decide which arriving vehicles to admit and how to divide power among them. I characterize optimal admission and power-aware charging policies for multiple classes of electric vehicles.",
-    methods: ["Dynamic programming", "Markov decision processes"],
+    category: "thesis",
+    label: "Essay 2",
+    title: "EV Charging Admission and Mode Assignment",
+    text: "I study admission and fast or slow charging-mode assignment for heterogeneous vehicles at charging stations with shared charger and power constraints. The focus is on balancing vehicle waiting costs and charging operating costs, with charging modes fixed during each session.",
+    methods: ["Markov decision processes", "Dynamic programming"],
     art: "ev",
     image: "",
     link: "",
+  },
+  {
+    category: "thesis",
+    label: "Essay 3",
+    title: "Dynamic Charging-Mode Switching",
+    text: "I extend the EV charging model to allow ongoing sessions to switch between fast and slow charging at arrival and completion events. I study how admission and mode-switching decisions should respond to changing queues and shared power constraints.",
+    methods: ["Markov decision processes", "Dynamic programming"],
+    art: "ev",
+    image: "",
+    link: "",
+  },
+  {
+    category: "publication",
+    title: "Truck Platooning in Freight Transportation",
+    text: "My published work in Transportation Research Part E studies how platoon formation strategies balance fuel savings against formation delays and system throughput. We use a closed queueing network model to capture stochastic travel times and platoon dynamics.",
+    methods: ["Queueing networks", "Continuous-time Markov chains"],
+    art: "platoon",
+    image: "",
+    link: "https://www.sciencedirect.com/science/article/pii/S1366554526000244",
   },
 ];
 
