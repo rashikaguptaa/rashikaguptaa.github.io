@@ -16,14 +16,9 @@ import { teaching } from '../data/optional.js';
             <p class="entry-meta">{[c.role, c.institution].filter(Boolean).join(', ')}</p>
             {c.detail && <p class="entry-meta">{c.detail}</p>}
             {c.courses?.length > 0 && (
-              <dl class="teaching-courses">
-                {c.courses.map((course) => (
-                  <div>
-                    <dt>{course.name}</dt>
-                    <dd>Instructor: {course.instructor}</dd>
-                  </div>
-                ))}
-              </dl>
+              <ul class="teaching-courses">
+                {c.courses.map((course) => <li>{course}</li>)}
+              </ul>
             )}
           </div>
         </li>
@@ -33,8 +28,7 @@ import { teaching } from '../data/optional.js';
 </Base>
 
 <style>
-  .teaching-courses { margin: 0.75rem 0 0; }
-  .teaching-courses > div + div { margin-top: 0.55rem; }
-  .teaching-courses dt { font-weight: 500; }
-  .teaching-courses dd { margin: 0; color: var(--muted); font-size: 0.975rem; }
+  .teaching-courses { margin: 0.75rem 0 0; padding-left: 1.25rem; }
+  .teaching-courses > li { display: list-item; padding: 0; border: 0; }
+  .teaching-courses > li + li { margin-top: 0.35rem; }
 </style>

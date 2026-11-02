@@ -170,7 +170,7 @@ export const teaching = [
     course: "Mathematics Preparatory Course for PGP",
     role: "Course instructor",
     institution: "IIM Ahmedabad",
-    detail: "Delivered 16 sessions for 200+ PGP and FABM students. Teaching evaluation: 8.2/10.",
+    detail: "Delivered 16 sessions for 200+ PGP and FABM students.",
   },
   {
     term: "Dec 2024 – Jan 2026",
@@ -179,10 +179,10 @@ export const teaching = [
     institution: "IIM Ahmedabad",
     detail: "Provided lecture support, conducted tutorials, graded assignments, and mentored students.",
     courses: [
-      { name: "Operations Management I", instructor: "Chetan Soman" },
-      { name: "Operations Management III", instructor: "Debjit Roy" },
-      { name: "Quantitative Methods IB", instructor: "Diptesh Ghosh" },
-      { name: "Quantitative Methods II", instructor: "Rajni Kant Bansal" },
+      "Operations Management I",
+      "Operations Management III",
+      "Quantitative Methods IB",
+      "Quantitative Methods II",
     ],
   },
 ];
