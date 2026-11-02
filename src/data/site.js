@@ -32,7 +32,7 @@ export const site = {
   cv: "",
 
   links: {
-    scholar: "",   // [ADD] your Google Scholar link, once you create a profile
+    scholar: "https://scholar.google.com/citations?user=NjkakHIAAAAJ&hl=en",
     orcid: "https://orcid.org/0009-0001-7455-7069",
     arxiv: "",
     linkedin: "https://www.linkedin.com/in/rashika-g",
@@ -137,6 +137,15 @@ export const publications = [
     pdf: "",
     abstract: "Road transportation via trucks is a dominant mode for long-haul freight transport across countries. However, due to their significant dependence on fossil fuels, trucks are a large contributor to carbon emissions. Hence, new technology-driven solutions such as truck platoons are gaining momentum. While platoons promise to reduce fuel costs and emissions, they may increase transportation time due to additional coordination delays, such as the time required for platoon formation. In this research, we examine the performance trade-offs between platoon fuel savings and excess delay costs resulting from waiting for platoon formation among three platoon formation strategies: intermittent, continuous, and opportunistic. We develop a novel Closed Queuing Network model that captures the dynamics of platoons, as well as the stochasticity in truck travel times, and provides realistic estimates of platoon wait times and vehicle throughput. The platoon formation delays and size-dependent travel times are modeled using merging and load-dependent nodes, respectively, and analyzed through a continuous-time Markov chain. Our study provides key insights into the impact of increasing platoon size on performance measures, including system throughput and mean waiting time. With platooning, the network throughput capacity is reduced; however, fuel savings are realized. For a given network topology, we can identify an optimal platoon formation strategy that maximizes the throughput and fuel efficiency, while simultaneously minimizing vehicle waiting costs.",
     selected: true,
+  },
+  {
+    title: "Performance analysis of robot routing strategies in human-robot collaborative warehouses",
+    authors: "Debjit Roy, Rashika Gupta",
+    venue: "Proceedings of the 17th International Material Handling Research Colloquium (IMHRC)",
+    year: 2025,
+    type: "conference",
+    link: "https://digitalcommons.georgiasouthern.edu/pmhr_2025/6/",
+    note: "Trondheim, Norway",
   },
 ];
 
