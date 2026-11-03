@@ -89,7 +89,6 @@ const updated = updatedAt.toLocaleDateString('en-GB', {
       <div class="wrap footer-inner">
         <span>© {new Date().getFullYear()} {site.name}</span>
         <span><strong>Last updated:</strong> <time datetime={updatedAt.toISOString()}>{updated}</time></span>
-        {site.email && <a href={`mailto:${site.email}`}>{site.email}</a>}
       </div>
     </footer>
   </body>
