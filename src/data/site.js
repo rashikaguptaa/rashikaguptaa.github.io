@@ -83,7 +83,7 @@ export const research = [
     label: "Essay 1",
     title: "Order Selection and Robot Routing in Collaborative Warehouses",
     text: "I study how orders should be selected and robots routed in human–robot collaborative warehouses to maximize picking throughput.",
-    methods: ["Markov decision processes", "Simulation"],
+    methods: ["Markov decision processes", "Queueing theory", "Simulation"],
     art: "warehouse",
     image: "",
     link: "",
@@ -111,7 +111,7 @@ export const research = [
   {
     category: "publication",
     title: "Truck Platooning in Freight Transportation",
-    text: "My published work in Transportation Research Part E studies how platoon formation strategies balance fuel savings against formation delays and system throughput. We use a closed queueing network model to capture stochastic travel times and platoon dynamics.",
+    text: "I study the trade-offs among fuel savings, vehicle throughput, and waiting costs in truck platooning. I use a closed queueing network model to compare intermittent, continuous, and opportunistic platoon formation strategies, accounting for formation delays and stochastic travel times that depend on platoon size.",
     methods: ["Queueing networks", "Continuous-time Markov chains"],
     art: "platoon",
     image: "",
