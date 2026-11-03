@@ -48,20 +48,6 @@ import { education, awards, service } from '../data/optional.js';
       </section>
     )}
 
-    {site.news?.length > 0 && (
-      <section class="block">
-        <h2>News</h2>
-        <ul class="entries">
-          {site.news.map((n) => (
-            <li>
-              <span class="entry-date">{n.date}</span>
-              <p>{n.link ? <a href={n.link}>{n.text}</a> : n.text}</p>
-            </li>
-          ))}
-        </ul>
-      </section>
-    )}
-
     {site.cv && <p class="more"><a href={site.cv}>Download full CV (PDF)</a></p>}
   </div>
 </Base>
