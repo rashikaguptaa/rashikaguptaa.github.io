@@ -140,7 +140,7 @@ export const publications = [
   },
   {
     title: "Performance analysis of robot routing strategies in human-robot collaborative warehouses",
-    authors: "Debjit Roy, Rashika Gupta",
+    authors: "D Roy, R Gupta",
     venue: "Proceedings of the 17th International Material Handling Research Colloquium (IMHRC)",
     year: 2025,
     type: "conference",
