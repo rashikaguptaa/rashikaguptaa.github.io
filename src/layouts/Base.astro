@@ -32,7 +32,10 @@ const person = {
   ...(site.email ? { email: `mailto:${site.email}` } : {}),
   sameAs: Object.values(site.links ?? {}).filter(Boolean),
 };
-const updated = new Date().toLocaleDateString('en-GB', { month: 'long', year: 'numeric' });
+const updatedAt = new Date();
+const updated = updatedAt.toLocaleDateString('en-GB', {
+  day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Asia/Kolkata',
+});
 ---
 <!doctype html>
 <html lang="en">
@@ -85,7 +88,7 @@ const updated = new Date().toLocaleDateString('en-GB', { month: 'long', year: 'n
     <footer class="site-footer">
       <div class="wrap footer-inner">
         <span>© {new Date().getFullYear()} {site.name}</span>
-        <span>Last updated {updated}</span>
+        <span><strong>Last updated:</strong> <time datetime={updatedAt.toISOString()}>{updated}</time></span>
         {site.email && <a href={`mailto:${site.email}`}>{site.email}</a>}
       </div>
     </footer>
