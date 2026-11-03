@@ -169,7 +169,7 @@ export const awards = [
 ];
 
 export const service = [
-  "Reviewer, International Journal of Production Research",
+  "Reviewer: International Journal of Production Research",
   "Doctoral Scholar Coordinator, IIM Ahmedabad",
 ];
 
