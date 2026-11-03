@@ -145,6 +145,7 @@ export const publications = [
     year: 2025,
     type: "conference",
     link: "https://digitalcommons.georgiasouthern.edu/pmhr_2025/6/",
+    abstract: "With growing customer expectations of speedy delivery and flexible throughput requirements, fulfillment centers are increasingly adopting human-robot collaborative systems for order picking. Existing research highlights the need for collaboration between pickers and robots to improve warehouse productivity. In this research, we develop a simulation model of the human-robot collaborative system to analyze the role of robot routing strategies in improving system throughput performance. In particular, we analyze three different robot routing strategies: sequential, random, and Probabilistic Shortest Queue routing. Thereafter, we examine the conditions under which a routing strategy outperforms the others.",
     note: "Trondheim, Norway",
   },
 ];
