@@ -157,7 +157,7 @@ export const talks = [
 // ------------------------------------------------------------
 export const education = [
   { years: "2022 – present", degree: "PhD in Management, Operations & Decision Sciences", institution: "Indian Institute of Management Ahmedabad", detail: "Committee: Debjit Roy (Chair), Prahalad Venkateshan, Ivo Adan" },
-  { years: "2021 – 2022", degree: "M.Tech in Environmental Engineering", institution: "Indian Institute of Technology (BHU) Varanasi", detail: "Completed the first year before joining the PhD programme at IIM Ahmedabad." },
+  { years: "2021 – 2022", degree: "M.Tech in Environmental Engineering", institution: "Indian Institute of Technology (BHU) Varanasi", detail: "Completed first year" },
   { years: "2017 – 2021", degree: "B.Tech in Civil Engineering", institution: "Institute of Engineering & Technology, Lucknow", detail: "" },
 ];
 
