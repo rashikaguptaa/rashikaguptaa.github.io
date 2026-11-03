@@ -39,18 +39,6 @@ export const site = {
     github: "",
   },
 
-  // Short items shown under "News" on the home page and the About page, newest first.
-  // link is optional.
-  news: [
-    { date: "2026", text: "Won First Prize in the Student Poster Competition at the INFORMS Transportation Science and Logistics Society Triennial Conference, MIT Sloan School of Management.", link: "" },
-    { date: "2026", text: "Our paper on stochastic modeling and design of truck platooning strategies is published in Transportation Research Part E.", link: "https://www.sciencedirect.com/science/article/pii/S1366554526000244" },
-    { date: "2026", text: "Runner-up in the Student Paper Competition at the ISB-POMS Workshop, Indian School of Business, Mohali.", link: "" },
-    { date: "Dec 2025", text: "Presented at the India Management Research Conference (IMRC), IIM Ahmedabad.", link: "" },
-    { date: "Jul 2025", text: "Presented a poster at the ISB-POMS Workshop, Indian School of Business, Hyderabad.", link: "" },
-    { date: "Jun 2025", text: "Taught the Mathematics Preparatory Course to 200+ incoming PGP and FABM students at IIM Ahmedabad.", link: "" },
-    { date: "Dec 2024", text: "2nd Runner-up, Best Research Presentation, Transportation and Logistics Track, India Management Research Conference (IMRC).", link: "" },
-  ],
-
   interests: [
     "Electric vehicles and charging systems",
     "Mobility systems",
@@ -169,7 +157,7 @@ export const talks = [
 // ------------------------------------------------------------
 export const education = [
   { years: "2022 – present", degree: "PhD in Management, Operations & Decision Sciences", institution: "Indian Institute of Management Ahmedabad", detail: "Committee: Debjit Roy (Chair), Prahalad Venkateshan, Ivo Adan" },
-  { years: "2021 – 2022", degree: "M.Tech, Environmental Engineering (discontinued to pursue PhD)", institution: "Indian Institute of Technology (BHU) Varanasi", detail: "" },
+  { years: "2021 – 2022", degree: "Postgraduate studies in Environmental Engineering", institution: "Indian Institute of Technology (BHU) Varanasi", detail: "Transitioned to the PhD programme at IIM Ahmedabad." },
   { years: "2017 – 2021", degree: "B.Tech in Civil Engineering", institution: "Institute of Engineering & Technology, Lucknow", detail: "" },
 ];
 
