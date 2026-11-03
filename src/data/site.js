@@ -162,10 +162,10 @@ export const education = [
 ];
 
 export const awards = [
-  { year: "2026", text: "First Prize, Student Poster Competition, INFORMS Transportation Science and Logistics Society Triennial Conference, MIT Sloan School of Management" },
-  { year: "2026", text: "Runner-up, Student Paper Competition, ISB-POMS Workshop, Indian School of Business, Mohali" },
-  { year: "2026", text: "Industrial Finance Corporation of India (IFCI) Award for Best Thesis Proposal" },
-  { year: "2024", text: "2nd Runner-up, Best Research Presentation, Transportation and Logistics Track, India Management Research Conference (IMRC)" },
+  { year: "2026", text: "First Prize, Student Poster Competition, INFORMS Transportation Science and Logistics Society Triennial Conference, MIT Sloan School of Management", link: "https://mitsloan.mit.edu/faculty/academic-groups/sponsors-2026-transportation-science-and-logistics-conference" },
+  { year: "2026", text: "Runner-up, Student Paper Competition, ISB-POMS Workshop, Indian School of Business, Mohali", link: "https://www.isb.edu/events/isb-poms-workshop-2026?" },
+  { year: "2026", text: "Industrial Finance Corporation of India (IFCI) Award for Best Thesis Proposal", link: "https://www.iima.ac.in/convocation2026?" },
+  { year: "2024", text: "2nd Runner-up, Best Research Presentation, Transportation and Logistics Track, India Management Research Conference (IMRC)", link: "https://conference.iima.ac.in/imrc2024/wp-content/uploads/2024/12/IMRC-2024-Valedictory-Event_V1.6.pdf?" },
 ];
 
 export const service = [

@@ -32,7 +32,7 @@ import { education, awards, service } from '../data/optional.js';
           {awards.map((a) => (
             <li>
               <span class="entry-date">{a.year}</span>
-              <p>{a.text}</p>
+              <p>{a.link ? <a href={a.link}>{a.text}</a> : a.text}</p>
             </li>
           ))}
         </ul>
